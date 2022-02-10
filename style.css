@@ -25,6 +25,9 @@ d6d9ce-f3dad8-f4c3c2-f1b5cb-e88eed
     padding: 0;
     box-sizing: border-box;
 }
+.hide {
+    display: none;
+}
 #fullContainer {
     width: 100vw;
 }
