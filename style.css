@@ -69,19 +69,19 @@ d6d9ce-f3dad8-f4c3c2-f1b5cb-e88eed
     align-items: center;
 }
 /* first page style */
-#firstPageContainer {
+.firstPageContainer {
     padding: 0 20px;
-    height: 100vh;
+    height: 80vh;
 }
-#fpcH1Cont {
+.fpcH1Cont {
     margin-top: 40vh;
     text-align: center;
 }
-#fPCStartCont {
+.fPCStartCont {
     margin-top: 15vh;
     cursor: pointer;
 }
-#fPCStartSpan {
+.fPCStartSpan {
     padding: 15px;
     background-color: #8C51A5;
     border-radius: 10px;
@@ -89,4 +89,9 @@ d6d9ce-f3dad8-f4c3c2-f1b5cb-e88eed
 .h4Bottom {
     padding: 3px;
     cursor: pointer;
+}
+#fPCSelectLanguageCont {
+    margin-top: 3vh;
+    padding: 0 20px;
+    height: 17vh;
 }
