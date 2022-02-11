@@ -2,11 +2,21 @@
 const hunH4 = document.querySelectorAll(".hun");
 const enH4 = document.querySelectorAll(".en");
 const datalangChange = document.querySelectorAll('[data-lang]');
+const hun1 = document.getElementById('hun1');
+const eng1 = document.getElementById('eng1');
+const fpCHun = document.getElementById('fpCHun');
+const fPCEn = document.getElementById('fPCEn');
+const fPCStartSpanHun =document.getElementById('fPCStartSpanHun');
+const fPCStartSpanEn =document.getElementById('fPCStartSpanEn');
+const fPCSelectLanguageCont =document.getElementById('fPCSelectLanguageCont');
+const secundPageContainer = document.getElementById('secundPageContainer');
+const sPCHun = document.getElementById('sPCHun');
+const sPCEng = document.getElementById('sPCEng');
 
 // let
 
 // addEventListener
-
+fPCStartSpanHun.addEventListener("click", nexthun);
 // call function
 
 changeLangHun ();
@@ -18,8 +28,6 @@ function changeLangHun() {
     for (let i = 0; i < hunH4.length; i++) {
      hunH4[i].addEventListener("click", function () { 
          if (datalangChange[i].classList.contains("hide")==false) {
-
-             console.log("Benne vagyok az if ágban i értéke:" +i )
              return;
          } else {
             document.documentElement.setAttribute("lang","hu");
@@ -35,19 +43,21 @@ function changeLangEn() {
     for (let i = 0;  i< enH4.length; i++) {
        enH4[i].addEventListener("click", function () {
         if (datalangChange[i].classList.contains("hide")==false) {
-            console.log("Benne vagyok az if ágban i értéke:" +i )
-
             document.documentElement.setAttribute("lang", "en");
             datalangChange[i].classList.add("hide");
             i++;
             datalangChange[i].classList.remove("hide");
             i--;
         } else {
-            console.log("Ez az en else ága");
+           return;
         }
-
-           console.log("Ez most az i értéke: "+i)
-        console.log(datalangChange[i].classList.contains("hide"))
        })    
     }    
+}
+function nexthun() {
+    fPCSelectLanguageCont.classList.remove("displayFlexRow");
+    fPCSelectLanguageCont.classList.add("hide");
+    fpCHun.classList.add("hide");
+    secundPageContainer.classList.remove("hide");
+    sPCHun.classList.remove("hide");
 }
