@@ -74,7 +74,7 @@ d6d9ce-f3dad8-f4c3c2-f1b5cb-e88eed
     height: 80vh;
 }
 .fpcH1Cont {
-    margin-top: 40vh;
+    margin-top: 30vh;
     text-align: center;
 }
 .fPCStartCont {
@@ -94,4 +94,12 @@ d6d9ce-f3dad8-f4c3c2-f1b5cb-e88eed
     margin-top: 3vh;
     padding: 0 20px;
     height: 17vh;
+}
+
+/* secund page style */
+.margintop5vh {
+    margin-top: 5vh;
+}
+.sPCStartCont {
+    margin-top: 10vh;
 }
