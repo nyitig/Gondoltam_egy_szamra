@@ -19,6 +19,7 @@ const inputtag = document.querySelectorAll(".inputvalid");
 const sPCHunNextCont = document.getElementById('sPCHunNextCont');
 const spanValid = document.querySelectorAll('.spanValid');
 const spanCont = document.querySelectorAll('.spanCont');
+const thirdPageContainer = document.getElementById('thirdPageContainer');
 
 // let
 let playerName ="";
@@ -98,12 +99,12 @@ function checkNameLenght () {
         nameLenght=false;
     }
 }
-function thirdPagecheckHun() {
+function thirdPagecheck() {
     if (nameLenght==true) {
         spanValid[inputtagindex].classList.remove("sPCStartContNone","color5");
         spanValid[inputtagindex].classList.add("fPCStartSpan","color1");
         spanCont[inputtagindex].classList.add("cursorPointer");
-        
+        spanCont[inputtagindex].addEventListener("click", goThirdPage);
     } else {
        if (spanCont[inputtagindex].classList.contains("cursorPointer")==true) {
         spanValid[inputtagindex].classList.remove("fPCStartSpan","color1");
@@ -141,7 +142,7 @@ function nextHunSPValid(inputtagindex) {
     inputtag[inputtagindex].addEventListener("keyup", function (){
         playerName=inputtag[inputtagindex].value;
         checkNameLenght();
-        thirdPagecheckHun();
+        thirdPagecheck();
 })
 inputtag[inputtagindex].addEventListener("keypress", enterPress);
 }
@@ -149,7 +150,12 @@ function nextEnSPValid(inputtagindex) {
     inputtag[inputtagindex].addEventListener("keyup", function (){
         playerName=inputtag[inputtagindex].value;
         checkNameLenght();
-        thirdPagecheckHun();
+        thirdPagecheck();
 })
 inputtag[inputtagindex].addEventListener("keypress", enterPress);
+}
+function goThirdPage() {
+    secundPageContainer.classList.add("hide");
+    thirdPageContainer.classList.remove("hide");
+    document.getElementById('playerName').innerHTML=playerName;
 }
