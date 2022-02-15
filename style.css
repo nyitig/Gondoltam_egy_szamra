@@ -103,3 +103,20 @@ d6d9ce-f3dad8-f4c3c2-f1b5cb-e88eed
 .sPCStartCont {
     margin-top: 10vh;
 }
+.sPCStartContNone {
+    padding: 15px;
+    background-color: #d6d9ce;
+    border-radius: 10px;
+}
+.cursorPointer {
+    cursor: pointer;
+}
+input {
+    text-align: center;
+    border: 1px solid #e88eed;
+    outline: none;
+
+}
+input:focus {
+    border: 3px solid #8C51A5;
+}
