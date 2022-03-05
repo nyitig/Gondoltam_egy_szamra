@@ -20,11 +20,15 @@ const sPCHunNextCont = document.getElementById('sPCHunNextCont');
 const spanValid = document.querySelectorAll('.spanValid');
 const spanCont = document.querySelectorAll('.spanCont');
 const thirdPageContainer = document.getElementById('thirdPageContainer');
+const playerNameTag =document.querySelectorAll(".playerName");
+const tPCHun = document.getElementById('tPCHun');
+const tPCEng = document.getElementById('tPCEng');
 
 // let
 let playerName ="";
 let nameLenght=false;
 let inputtagindex=0;
+let randomNumberNum =0;
 
 // addEventListener
 fPCStartSpanHun.addEventListener("click", nexthun);
@@ -136,7 +140,6 @@ function inputtagindexCreatEn(i) {
         default:
             break;
     }
-    
 }
 function nextHunSPValid(inputtagindex) {
     inputtag[inputtagindex].addEventListener("keyup", function (){
@@ -144,7 +147,11 @@ function nextHunSPValid(inputtagindex) {
         checkNameLenght();
         thirdPagecheck();
 })
-inputtag[inputtagindex].addEventListener("keypress", enterPress);
+inputtag[inputtagindex].addEventListener("keypress", function (event) {
+   if (event.keyCode==13 && nameLenght==true) {
+       goThirdPage();
+   }
+});
 }
 function nextEnSPValid(inputtagindex) {
     inputtag[inputtagindex].addEventListener("keyup", function (){
@@ -152,10 +159,25 @@ function nextEnSPValid(inputtagindex) {
         checkNameLenght();
         thirdPagecheck();
 })
-inputtag[inputtagindex].addEventListener("keypress", enterPress);
+inputtag[inputtagindex].addEventListener("keypress", function (event) {
+    if (event.keyCode==13 && nameLenght==true) {
+        goThirdPage();
+    }
+ });
 }
 function goThirdPage() {
     secundPageContainer.classList.add("hide");
     thirdPageContainer.classList.remove("hide");
-    document.getElementById('playerName').innerHTML=playerName;
+    playerNameTag[0].innerHTML="Szia, "+playerName;
+    playerNameTag[1].innerHTML="Hi, "+playerName;
+    if (inputtagindex==0) {
+       tPCHun.classList.remove("hide");
+       document.querySelector('input[name=numberHun]').focus();
+        randomNumber();
+    } else {
+       tPCEng.classList.remove("hide");
+    }
+}
+function randomNumber() {
+    randomNumberNum=Math.floor(Math.random() * 99);
 }
