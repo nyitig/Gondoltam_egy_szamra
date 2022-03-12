@@ -79,12 +79,23 @@
                     <div id="tPCH4Cont" class="">
                         <h4 id="TpcH4" class="fontHeader fontsize1dot2">Gondoltam egy számra 0 és 99 között.
                              Kitalálod melyik számra gondoltam?</h4>
+                        <h5 id="tPCH5" class="fontOther color5">Lehetőségek száma: <span id="tPCH5Span" class=" spanCounter fontOther color5"></span></h5>
                     </div>
                     <div id="tpCNumInputContainer" class="margintop5vh">
-                        <input type="number" name="numberHun" id="" class="fontOther fontsize1dot2" placeholder="Írj be egy számot!" required>
+                        <input type="number" name="numberHun" id="tpCNumInput" class="fontOther fontsize1dot2" placeholder="Írj be egy számot!" required>
                     </div>
-                    <div id="tPCSubmitCont" class="margintop5vh">
-                        <span id="tPCSubmitSpan" class="fPCStartSpan fontOther fontsize1dot2 color1">Ez az?</span>
+                    <div id="tPCSubmitCont" class="margintop5vh displayFlexRow justContSpEv alignItCent">
+                        <div id="tPCSpCOnt" class="">
+                            <span id="tPCSubmitSpan" class="fPCStartSpan fontOther fontsize1dot2 color1 cursorPointer">Ez az?</span>
+                        </div>
+                        <div id="tPCHelpCont" >
+                            <input type="checkbox" name="help" id="helpcheck" class="hide">
+                            <span id="tPCHelpSpan" class="sPCStartContNone fontOther fontsize1dot2 color5 cursorPointer">Segítég!</span>
+                        </div>
+                        
+                    </div>
+                    <div id="tPCHelpTextCont" class="margintop5vh displayFlexColumn">
+                        <h6 id="tPCHelpTexth5" class="hide fontOther fontsize1dot2 color5"></h6>
                     </div>
                     </div>
                 </div>

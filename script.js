@@ -23,12 +23,21 @@ const thirdPageContainer = document.getElementById('thirdPageContainer');
 const playerNameTag =document.querySelectorAll(".playerName");
 const tPCHun = document.getElementById('tPCHun');
 const tPCEng = document.getElementById('tPCEng');
+const tPCHelpCont = document.getElementById('tPCHelpCont');
+const tPCHelpSpan= document.getElementById('tPCHelpSpan');
+const tPCHelpTexth5 = document.getElementById('tPCHelpTexth5');
+const tPCHelpTextCont = document.getElementById('tPCHelpTextCont');
+const tPCSpCOnt = document.getElementById('tPCSpCOnt');
+const tpCNumInput=document.getElementById('tpCNumInput');
+const spanCounter=document.querySelectorAll('.spanCounter');
 
 // let
 let playerName ="";
 let nameLenght=false;
 let inputtagindex=0;
 let randomNumberNum =0;
+let counter=9;
+let attempt=0;
 
 // addEventListener
 fPCStartSpanHun.addEventListener("click", nexthun);
@@ -170,14 +179,67 @@ function goThirdPage() {
     thirdPageContainer.classList.remove("hide");
     playerNameTag[0].innerHTML="Szia, "+playerName;
     playerNameTag[1].innerHTML="Hi, "+playerName;
+    spanCounter[0].innerHTML=counter;
     if (inputtagindex==0) {
        tPCHun.classList.remove("hide");
        document.querySelector('input[name=numberHun]').focus();
         randomNumber();
+        tPCSpCOnt.addEventListener("click", function () {
+            numbercheckHun();
+        })
+        tPCHelpCont.addEventListener("click", function () {
+            let elm= document.getElementById('helpcheck');
+            elm.checked = !elm.checked;
+            if (elm.checked==true) {
+                tPCHelpSpan.classList.remove("sPCStartContNone","color5");
+                tPCHelpSpan.classList.add("fPCStartSpan","color1")
+                tPCHelpTexth5.classList.remove("hide");
+               }
+            else {
+                tPCHelpSpan.classList.remove("fPCStartSpan","color1")
+                tPCHelpSpan.classList.add("sPCStartContNone","color5");              
+                tPCHelpTexth5.classList.add("hide");
+            }
+        });
     } else {
        tPCEng.classList.remove("hide");
     }
 }
 function randomNumber() {
     randomNumberNum=Math.floor(Math.random() * 99);
+}
+function numbercheckHun() {
+    let inputNumber=tpCNumInput.value;
+    if (inputNumber=="") {
+        tpCNumInput.placeholder="Nem írtál be számot!";
+        return;
+    }
+    for (let i = 0; i < 100; i++) {
+        if (i==inputNumber) {
+            gameHun(inputNumber);
+            return;
+        }
+        }
+        tpCNumInput.value="";
+        tpCNumInput.placeholder="Rossz szám!";
+}
+function gameHun(inputNumber) {
+    console.log(randomNumberNum);
+  if (counter==0) {
+    //   ha nincs több lehetőség
+  }
+  else {
+      counter--;
+      spanCounter[0].innerHTML=counter;
+      if (inputNumber<randomNumberNum) {
+        tpCNumInput.value="";
+        tpCNumInput.placeholder="Sajnos nem talált!";
+        tPCHelpTexth5.innerHTML="Ennél nagyobb számra gondoltam";
+      }
+      if (inputNumber>randomNumberNum) {
+        tpCNumInput.value="";
+        tpCNumInput.placeholder="Sajnos nem talált!";
+        tPCHelpTexth5.innerHTML="Ennél kisebb számra gondoltam";
+      }
+  }
 }

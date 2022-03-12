@@ -65,6 +65,9 @@ d6d9ce-f3dad8-f4c3c2-f1b5cb-e88eed
 .justContSpBetw {
     justify-content: space-between;
 }
+.justContSpEv {
+    justify-content: space-evenly;
+}
 .alignItCent {
     align-items: center;
 }
@@ -74,7 +77,7 @@ d6d9ce-f3dad8-f4c3c2-f1b5cb-e88eed
     height: 80vh;
 }
 .fpcH1Cont {
-    margin-top: 30vh;
+    margin-top: 20vh;
     text-align: center;
 }
 .fPCStartCont {
@@ -120,3 +123,5 @@ input {
 input:focus {
     border: 3px solid #8C51A5;
 }
+
+/* third page style */
