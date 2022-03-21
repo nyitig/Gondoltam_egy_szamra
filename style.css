@@ -44,11 +44,11 @@ d6d9ce-f3dad8-f4c3c2-f1b5cb-e88eed
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
 }
-.fontsize1dot6 {
-    font-size: 1.6rem;
-}
 .fontsize1dot2 {
     font-size: 1.2rem;
+}
+.fontsize1 {
+    font-size: 1rem;
 }
 .fontOther {
     font-family: 'Open Sans', sans-serif;
@@ -70,6 +70,9 @@ d6d9ce-f3dad8-f4c3c2-f1b5cb-e88eed
 }
 .alignItCent {
     align-items: center;
+}
+.textAlingCent {
+    text-align: center;
 }
 /* first page style */
 .firstPageContainer {
@@ -97,6 +100,9 @@ d6d9ce-f3dad8-f4c3c2-f1b5cb-e88eed
     margin-top: 3vh;
     padding: 0 20px;
     height: 17vh;
+}
+.margintop1vh {
+    margin-top: 1vh;
 }
 
 /* secund page style */
