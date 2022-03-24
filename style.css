@@ -30,6 +30,8 @@ d6d9ce-f3dad8-f4c3c2-f1b5cb-e88eed
 }
 #fullContainer {
     width: 100vw;
+    background-image: linear-gradient(135deg,#d6d9ce,#e88eed);
+    padding-top: 3vh;
 }
 .width360px {
     width: 360px;
@@ -78,6 +80,8 @@ d6d9ce-f3dad8-f4c3c2-f1b5cb-e88eed
 .firstPageContainer {
     padding: 0 20px;
     height: 80vh;
+    background-color: white;
+    border-radius: 15px 15px 0 0;
 }
 .fpcH1Cont {
     margin-top: 20vh;
@@ -97,9 +101,9 @@ d6d9ce-f3dad8-f4c3c2-f1b5cb-e88eed
     cursor: pointer;
 }
 #fPCSelectLanguageCont {
-    margin-top: 3vh;
-    padding: 0 20px;
+    padding: 3vh 20px 0 20px;
     height: 17vh;
+    background-color: white;
 }
 .margintop1vh {
     margin-top: 1vh;
@@ -131,3 +135,9 @@ input:focus {
 }
 
 /* third page style */
+
+/* fourt page style */
+
+.margintop10vh {
+    margin-top: 10vh;
+}
