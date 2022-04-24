@@ -1,4 +1,4 @@
-# Gondoltam_egy_szamra
+# Gondoltam egy számra
 Egy egyszerű számkitalálós játék
 
 Sziasztok!
